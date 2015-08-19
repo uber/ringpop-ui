@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ringpop UI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type- "text/css" href="../css/styles.css">
+    <style>
+    body {
+        background-color: whitesmoke;
+        color: darkgrey;
+    }
+    
+    h1 {
+        color: darkgrey
+    }
+    
+    p {
+        color: green
+    }
+
+    .datum {
+        border-radius: 5px;
+        background: darkslategrey;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+    }
+    
+    .tabum {
+        border-radius: 5px;
+        background: slategrey;
+        padding: 10px;
+        margin: 3px;
+        display: inline-block;
+    }
+    
+    .habum {
+        border-radius: 5px;
+        background: lightblue;
+        padding: 10px;
+        margin: 3px;
+        display: inline-block;
+    }
+    
+    .red {
+        background: red;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+    }
+    
+    .green {
+        background: green;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+    }
+    
+    .yellow {
+        background: yellow;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+    }
+    
+    #chart {
+        height: 360px;
+        position: relative;
+        width: 360px;
+    }
+    
+    .tooltip {
+        background: #eee;
+        box-shadow: 0 0 5px #999999;
+        color: #333;
+        display: none;
+        font-size: 12px;
+        left: 130px;
+        padding: 10px;
+        position: absolute;
+        text-align: center;
+        top: 95px;
+        width: 160px;
+        z-index: 10;
+    }
+    
+    table {
+        background: darkslategrey;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="nav nav-sidebar sidebar-nav">
+                <li><a id="addService" href="#"><span class="glyphicon glyphicon-plus"></span> Add Service</a></li>
+            </ul>
+        </div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Ringpop UI</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+            </div>
+            <div class="fluid-row">
+                <h2>Services</h2>
+                <div class="col-sm-8">
+                    <div id="content"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/jsx;harmony=true" src="../scripts/client_services.js"></script>
+        <div id="fade" class="black_overlay">
+        </div>
+    </div>
+</body>
+</html>

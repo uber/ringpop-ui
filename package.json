@@ -1,0 +1,50 @@
+{
+  "name": "ringpop-ui",
+  "version": "1.0.0",
+  "description": "A visualization tool for Ringpop",
+  "main": "index.js",
+  "scripts": {
+    "local": "PORT=9000 node server/index.js",
+    "adhoc": "PORT=9001 node server/index.js",
+    "poller": "node poller/poller.js",
+    "config": "node poller/editConfig.js",
+    "pollingConfig": "node poller/editConfig.js",
+    "pollerConfig": "node poller/editConfig.js",
+    "pollingSpeed": "node poller/editSpeed.js",
+    "pollerSpeed": "node poller/editSpeed.js",
+    "speed": "node poller/editSpeed.js",
+    "help": "node scripts/help.js",
+    "jshint": "jshint --verbose server/*.js server/controllers/*.js server/util/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uber/ringpop-ui.git"
+  },
+  "keywords": [
+    "Ringpop"
+  ],
+  "author": "Daniel Diaz, Alex Hauser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uber/ringpop-ui/issues"
+  },
+  "homepage": "https://github.com/uber/ringpop-ui#readme",
+  "dependencies": {
+    "async": "^1.3.0",
+    "body-parser": "^1.4.3",
+    "event-drops": "^0.1.1",
+    "express": "^4.13.0",
+    "hogan-express": "^0.5.2",
+    "lodash": "^3.10.0",
+    "react": "^0.13.3",
+    "redis": "^0.12.1",
+    "ringpop": "^9.8.22",
+    "tchannel": "^1.3.2"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "istanbul": "^0.3.5",
+    "jshint": "^2.5.6",
+    "tape": "^3.3.0"
+  }
+}
