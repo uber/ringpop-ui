@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ringpop UI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.css">
+    <link rel="stylesheet" type- "text/css" href="../../../css/styles.css">
+     <style>
+        #ring {
+            margin-top: -150px;
+        }
+        rect.bordered {
+            stroke: #E6E6E6;
+            stroke-width:2px;   
+        }
+
+        text.mono {
+            font-size: 9pt;
+            font-family: Consolas, courier;
+            fill: #aaa;
+        }
+
+        text.axis-workweek {
+            fill: #000;
+        }
+
+        text.axis-worktime {
+            fill: #000;
+        }
+
+        #svg {
+            padding: 0px;
+            margin: 0px;
+            cursor: pointer;
+        }
+        .svg {
+            padding: 0px;
+            margin: 0px;
+            cursor: pointer;
+        }
+
+        #tableAddress {
+            display: block;
+            padding: 9px;
+        }
+
+        #tableStatus {
+            display: block;
+            padding: 16px;
+        }
+
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+  
+        }
+
+        .area {
+          fill: steelblue;
+        }
+
+        rect {
+          fill-opacity: .7;
+         
+        }
+      
+        .chart div {
+          font: 10px sans-serif;
+          background-color: steelblue;
+          text-align: right;
+          padding: 3px;
+          margin: 1px;
+          color: white;
+        }
+
+        .datum {
+            border-radius: 5px;
+            background: darkslategrey;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .inLine {
+            display: inline-block;
+        }
+         .inLine2 {
+            display: inline-block;
+        }
+
+        .whitespace {
+            white-space: pre
+        }
+        
+        .habum {
+            border-radius: 5px;
+            background: lightblue;
+            padding: 10px;
+            margin: 3px;
+            display: inline-block;
+        }
+        
+        .red {
+            background: red;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+        
+        .redText {
+            color: red;
+        }
+        .green {
+            background: green;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+        
+        .yellow {
+            background: yellow;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .tooltipd3 {
+           background: #eee;
+            box-shadow: 0 0 5px #999999;
+            color: #333;
+            display: none;
+            font-size: 12px;
+            padding: 10px;
+            position: absolute;
+            text-align: center;
+            width: 160px;
+            z-index: 5000;
+        }
+
+        .label {
+            position: relative;
+            color: #6B6B6B;
+        }
+
+        .percent {
+            color: #242424;
+            position: relative;
+        }
+
+        .breadcrumb:hover { 
+            display: inline-block;
+            background-color: yellow;
+            cursor: pointer;
+            margin: 0;
+            padding: 50;
+        }
+
+        .breadcrumb {
+            margin: 0;
+            display: inline-block;
+        }
+
+        #clusterHistory {
+            padding-top: 15%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand ringpopHeader" href="/">Ringpop UI</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" id="container">
+        <div class="fluid-row">
+            <p></p>
+            <h2>Datacenter</h2>
+            <div class="col-md-6">
+                <h3 id="service">
+                    <div class="breadcrumb" onClick="goToClusters()">{{service}}</div> >
+                    <div class="breadcrumb" onClick="goToDatacenters()">{{datacent}}</div>
+                </h3>
+            </div>
+            <div class="col-md-4" id="header">
+            </div>
+            <div class="col-sm-11">
+                <div id="content"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/jsx;harmony=true" src="../../../scripts/datacenter.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ringpop UI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react-with-addons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../../../../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.css">
+    <link rel="stylesheet" type- "text/css" href="../../../../../css/styles.css">
+
+     <style>
+         rect.bordered {
+            stroke: #E6E6E6;
+            stroke-width:2px;   
+        }
+        text.mono {
+            font-size: 9pt;
+            font-family: Consolas, courier;
+            fill: #aaa;
+        }
+        text.axis-workweek {
+            fill: #000;
+        }
+        text.axis-worktime {
+            fill: #000;
+        }
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+
+        .area {
+          fill: steelblue;
+        }
+
+        rect {
+          fill-opacity: .7;
+         
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+
+        .datum {
+            border-radius: 5px;
+            background: darkslategrey;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .inLine {
+            display: inline-block;
+        }
+
+         .inLine2 {
+            display: inline-block;
+        }
+
+        .whitespace {
+            white-space: pre
+        }
+        
+        .tabum {
+            border-radius: 5px;
+            background: slategrey;
+            padding: 10px;
+            margin: 3px;
+            display: inline-block;
+        }
+        
+        .habum {
+            border-radius: 5px;
+            background: lightblue;
+            padding: 10px;
+            margin: 3px;
+            display: inline-block;
+        }
+        
+        .red {
+            background: red;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+        
+        .green {
+            background: green;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+        
+        .yellow {
+            background: yellow;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .breadcrumb:hover { 
+            display: inline-block;
+            background-color: yellow;
+            cursor: pointer;
+        }
+
+        .breadcrumb {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand ringpopHeader" href="/">Ringpop UI</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+        </div> 
+        <div class="fluid-row">
+            <h2>Host</h2>
+            <h3 id="service"><div class="breadcrumb" onClick="goToClusters()">{{service}}</div> > <div class="breadcrumb" onClick="goToDatacenters()">{{datacent}}</div> > <div class="breadcrumb" onClick="goToHosts()">{{host}}</div></h3>
+            <div class="col-sm-8">
+                <div id="content"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/jsx;harmony=true" src="../../../../../scripts/host.js"></script>
+    <div id="fade" class="black_overlay">
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.idea/
+.DS_Store
+coverage
+*.swp
+coverage/*
+node_modules/*
+npm-debug.log
+hosts.json
+notes.txt
+notes.txt~
+poller/poller-config.json
