@@ -1,4 +1,4 @@
-# Ringpop-UI
+# ringpop-ui
 
 Ringpop UI is a tool to onboard Ringpop instances and inspect various properties about the cluster. This includes membership lists,
 percentage of faulty/suspect/healthy nodes, keyspace distribution lookup, and display of historical data such as cluster size history and
