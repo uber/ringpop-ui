@@ -5,7 +5,7 @@ percentage of faulty/suspect/healthy nodes, keyspace distribution lookup, and di
 the state changes of individual nodes over the past 24 hours.
 
 # Installation
-`npm install`
+`npm install uber/ringpop-ui`
 
 # Running
 If you are running locally, Ringpop UI listens on port 9000 by default.
