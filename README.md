@@ -4,10 +4,10 @@ Ringpop UI is a tool to onboard Ringpop instances and inspect various properties
 percentage of faulty/suspect/healthy nodes, keyspace distribution lookup, and display of historical data such as cluster size history and
 the state changes of individual nodes over the past 24 hours.
 
-
-## Setup
+# Installation
 `npm install`
 
+# Running
 If you are running locally, Ringpop UI listens on port 9000 by default.
 `npm run local` 
 
@@ -25,3 +25,5 @@ This prompts you for information to configure the background poller.
 `npm start poller`
 Runs the background poller, which will continuously check the cluster it is configured to connect to for state changes.
 
+# Caveats
+Ringpop UI is not yet production-hardened. This project is still under heavy development.
