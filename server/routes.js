@@ -306,17 +306,17 @@ function getAdminStatsFinishedMembership(req, res, membership, services) {
             }
             var membershipObject = JSON.parse(res2);
             writeToMembership();
-            async.mapLimit(membershipObject.ring, 5, dnsResolution.bind(membershipObject), function(err) {
-                if (err) {
-                    res.end(JSON.stringify(membershipObject));
-                    client.quit();
-                    return;
-                }
+         //   async.mapLimit(membershipObject.ring, 5, dnsResolution.bind(membershipObject), function(err) {
+          //      if (err) {
+            //        res.end(JSON.stringify(membershipObject));
+           //         client.quit();
+           //         return;
+            //    }
                 membershipObject.hosts = hosts;
                 membershipObject.percentages = percentages;
                 res.end(JSON.stringify(membershipObject));
                 client.quit();
-            });
+          //  });
           }
 
           function dnsResolution(address, cb) {
